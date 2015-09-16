@@ -1,5 +1,5 @@
-# docker-storm
-Apache Storm Docker Container
+# docker-storm-ui
+Apache Storm ui Docker Container
 
 # Build Docker image by [Packer](http://www.packer.io/)
 

@@ -16,9 +16,9 @@ until confd -onetime -node $ETCD -config-file /etc/confd/conf.d/storm.toml > /va
 done
 
 echo "[storm] Running confd in the background"
-confd -interval 120 -node $ETCD -config-file /etc/confd/conf.d/storm.toml > /var/log/confd.log 2>&1
+confd -interval 120 -node $ETCD -config-file /etc/confd/conf.d/storm.toml >> /var/log/confd.log 2>&1 &
 
-echo "[storm] running storm nimbus"
+echo "[storm] running storm ui"
 /usr/share/storm/bin/storm ui
 
 # Wait for nimbus to start

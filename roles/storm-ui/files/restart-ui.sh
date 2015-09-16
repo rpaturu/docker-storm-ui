@@ -2,5 +2,9 @@
 
 set -eo pipefail
 
-echo "[storm] running storm nimbus"
+echo "[storm] stopping storm ui"
+PID=(jps | grep core | cut -d " " -f 1)
+kill -9 $PID
+
+echo "[storm] starting storm ui"
 /usr/share/storm/bin/storm ui
