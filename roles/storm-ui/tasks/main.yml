@@ -1,4 +1,4 @@
-# file: roles/java/storm/main.yml
+# file: roles/storm-ui/tasks/main.yml
 
 - name: Add storm group
   group: name=storm state=present
